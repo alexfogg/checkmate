@@ -6,11 +6,8 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate(params[:password])
       session[:user_id] = user.id
       @auth = User.find(session[:user_id]) if session[:user_id].present?
-
-      redirect_to(root_path)
     else
       session[:user_id] = nil
-      redirect_to(root_path)
     end
   end
 
