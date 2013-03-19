@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe Album do
-  let(:user) {User.create(name: 'Bob', email: 'bob@gmail.com', password: 'a', password_confirmation: 'a')}
+describe User do
 
   describe '.create' do
     it 'creates a User' do
+      user = FactoryGirl.create(:user)
       user.should be_an_instance_of(User)
       User.name.should eq 'Bob'
       User.email.should eq 'bob@gmail.com'
