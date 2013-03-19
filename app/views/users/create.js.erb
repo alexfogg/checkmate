@@ -1,0 +1,6 @@
+<% if @user.valid? %>
+  $('#form').empty().after('<p>You are now a member of checkmate. Congrats!</p>');
+  $('#form + p').fadeOut(2000, function(){ $('#form + p').remove(); });
+<% else %>
+  $('#form').empty().append('<%=j render(:partial => 'form') %>');
+<% end %>
