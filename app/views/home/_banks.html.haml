@@ -1,0 +1,6 @@
+/ - if @auth.present?
+%table
+  %tr
+    - Bank.all.each do |bank|
+      %td bank.name
+      %td bank.balance
