@@ -1,11 +1,11 @@
 class BanksController < ApplicationController
-  def index
-  end
   def new
     @bank = Bank.new
   end
   def create
-    @bank = Bank.create(params[:bank])
+    Bank.create(params[:bank])
+    @bank = Bank.order(:name)
+    @banks = Bank.all
   end
 
 end

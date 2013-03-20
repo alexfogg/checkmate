@@ -1,6 +1,9 @@
 - if @auth.present?
   %table
-    - Bank.all.each do |bank|
+    %tr
+      %th Bank Name
+      %th Balance
+    - @banks.each do |bank|
       %tr
-        %td= bank.name
+        %td= link_to(bank.name, bank, :class => 'button tiny radius success')
         %td= bank.balance
