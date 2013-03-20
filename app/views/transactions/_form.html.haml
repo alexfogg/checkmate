@@ -7,6 +7,8 @@
       = f.text_field :amt
       = f.label :to
       = f.text_field :to_whom
-      = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button tiny radius alert'
+      = button_tag :dep
+      =button_tag :with
+      / = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button tiny radius alert'
       = f.submit 'Save', :class => 'button tiny radius success'
   .large-9.columns
